@@ -19,7 +19,7 @@
                     <li><a href="#">Contact</a></li>
                 </ul>
                 <div>
-                    <form action="backend/login.php" method="post">
+                    <form action="backend/login-inc.php" method="post">
                         <input type="text" name="mailuid" id="" placeholder="Username/E-mail..">
                         <input type="password" name="pwd" placeholder="Password..">
                         <button name="login-submit" type="submit">Login</button>
