@@ -61,17 +61,17 @@
         }
 
         else{
-            $sql = "INSERT INTO users (uidUsers,emailUsers,pwdUsers) VALUES=(?,?,?)";
+            $sql = "INSERT INTO users (uidUsers, emailUsers, pwdUsers) VALUES (?,?,?);";
             //create a stmt statement
             $stmt = mysqli_stmt_init($conn);
             //check the stmt
-            if (mysqli_stmt_prepare($stmt, $sql)){
+            if (!mysqli_stmt_prepare($stmt, $sql)){
                 header("Location: ../signup.php?error=sqlerror"); 
                 exit();
             }
             else {
                 //encrypt password
-                $hashedpwd = password_hash($password,  PASSWORD_DEFAULT);
+                $hashedpwd = password_hash($password, PASSWORD_DEFAULT);
                 mysqli_stmt_bind_param($stmt, "sss", $username, $email, $hashedpwd);
                 mysqli_stmt_execute($stmt);
                 header("Location: ../signup.php?signup=success");
