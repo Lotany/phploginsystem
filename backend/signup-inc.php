@@ -12,7 +12,7 @@
    $password = $_POST['pwd'];
    $passwordRepeat = $_POST['pwd-repeat'];
 //error handler checking if the texx boxes are empty
-   if(empty($username) || empty($email) || empty($password) || empty($passwordRepeat)  ){
-
+   if(empty($username) || empty($email) || empty($password) || empty($passwordRepeat)){
+    header("Location: ../signup.php?error=empyfields$uid".$username."&mail".$email."$");
    }
  }

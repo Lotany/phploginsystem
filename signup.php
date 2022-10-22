@@ -6,7 +6,7 @@
     <div>
         <section>
             <h1>Signup</h1>
-            <form action="backend/signup-inc-.php" method="post">
+            <form action="backend/signup-inc.php" method="post">
                 <input type="text" name="uid" placeholder="Username">
                 <input type="email" name="mail" placeholder="Email">
                 <input type="password" name="pwd" placeholder="Password">
