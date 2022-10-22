@@ -26,8 +26,8 @@
 
                 <?php
                         if (isset($_SESSION['userId'])){
-                           echo '<form action="backend/login.php" method="post">
-                           <button name="login-submit" type="submit">Logout</button>
+                           echo '<form action="backend/logout-inc.php" method="post">
+                           <button name="logout-submit" type="submit">Logout</button>
                        </form>';
                         }
                         else {
