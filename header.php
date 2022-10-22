@@ -18,5 +18,16 @@
                     <li><a href="#">About me</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
+                <div>
+                    <form action="backend/login.php" method="post">
+                        <input type="text" name="mailuid" id="" placeholder="Username/E-mail..">
+                        <input type="password" name="pwd" placeholder="Password..">
+                        <button name="login-submit" type="submit">Login</button>
+                    </form>
+                    <a href="signup.php">Signup</a>
+                    <form action="backend/login.php" method="post">
+                        <button name="login-submit" type="submit">Logout</button>
+                    </form>
+                </div>
             </nav>
         </header>
