@@ -40,4 +40,7 @@
     header("Location: ../signup.php?error=passwordcheck$uid=".$username."&mail".$email);
     exit();
    }
+   else{
+    $sql ="SELECT uidUsers FROM users WHERE uidUsers=?";
+   }
  }
