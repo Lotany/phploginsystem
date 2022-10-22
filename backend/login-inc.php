@@ -21,7 +21,7 @@ if (isset($_POST['login-submit'])){
         exit();
      }
      else{
-        mysqli_stmt_bind_param($stmt,"ss", $mailuid, $password);
+        mysqli_stmt_bind_param($stmt,"ss", $mailuid, $mailuid);
         mysqli_stmt_execute($stmt);
         $result = mysqli_stmt_get_result($stmt);
         if($row = mysqli_fetch_assoc($result)){
@@ -36,6 +36,8 @@ if (isset($_POST['login-submit'])){
                 session_start();
                 $_SESSION['userId']=$row['idUsers'];
                 $_SESSION['userUid']=$row['uidUsers'];
+                header("Location: ../index.php?login=success");
+                exit();
             }
 
             else{
